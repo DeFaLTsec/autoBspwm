@@ -268,7 +268,8 @@ def powerlevel():
 
     # Añadiendo scripts personalizados
     os.system("cp files/zshrc_conf ~/.zshrc")
-
+    os.system("cp files/oth/p10k.zsh ~/.p10k.zsh")
+  
     time.sleep(2)
     blue()
     print("\n[✔] La powerlevel10k ha sido instalada correctamente!\n")
@@ -353,9 +354,18 @@ def oth():
     os.system("chmod +x bin/whichSystem.py")
     os.system("chmod +x bin/fastTCPscan.go")
 
-    # Instalando lsd para zsh
-    os.system("sudo dpkg -i tools/lsd.deb")
-
+    # Instala lsd pa ra zsh
+    os.system("sudo dpkg -i files/lsd.deb")
+    
+    # Instala batcat
+    os.system("sudo dpkg -i files/bat.deb")
+    
+    # Instala fzf
+    os.system("git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf")
+    
+    # Instala Ranger
+    os.system("sudo apt install ranger")
+    
     print("\n[✔] Toda la configuracion se ha instalado correctamente!!\n")
 
 if __name__ == '__main__':
