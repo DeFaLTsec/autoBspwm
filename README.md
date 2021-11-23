@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-autoBspwm es un script automatizado para la instalacion de un entorno de escritorio limpio y rapido
+Facil y Rapido para instalar un Entorno de Escritorio
 </p>
 
 
