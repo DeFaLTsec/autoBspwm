@@ -55,6 +55,7 @@ Da permisos de ejecucion `chmod +x main.py`
 
 Por ultimo `python3 main.py`
 
+
 ### Ejecutando
 
 Luego de instalar la configuracion debes reiniciar la maquina para que todo carge.
