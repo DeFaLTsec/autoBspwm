@@ -49,15 +49,15 @@ con el correo defalt034@protonmail.com
 ### Instalación
 La instalacion es la misma en todas las distribuciones de Linux.
 
-Dirigete a la ruta de Descargas `cd /home/$USER$/Downloads`
+`cd /home/$USER$/Downloads`
 
-Instala el repositorio con `git clone https://github.com/DeFaltDev/autoBspwm.git` 
+`git clone https://github.com/DeFaltDev/autoBspwm.git`
 
-Dirigete a la carpeta descargada `cd autoBspwm`
+`cd autoBspwm`
 
-Da permisos de ejecucion `chmod +x main.py`
+`chmod +x main.py`
 
-Por ultimo `python3 main.py`
+`python3 main.py`
 
 
 ### Ejecutando
