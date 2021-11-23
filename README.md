@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-Facil y Rapido para instalar un Entorno de Escritorio
+Facil y Rapido para crear un Entorno de Escritorio
 </p>
 
 
