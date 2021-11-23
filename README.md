@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="banner3.png" alt="autoBspwm">
+  <img src="prueba.png" alt="autoBspwm">
 </p>
 
 <p align="center">
