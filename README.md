@@ -39,7 +39,8 @@ un escritorio limpio y de manera rapida para realizar sus cosas.
 - Entorno configurable, si quieres cambiar algo puedes hacerlo
 
 ## Obtener Ayuda
-Si tienes alguna duda o algun problema que reportar, no dudes en comunicarte conmigo en 
+Si tienes alguna duda o algun problema que reportar, no dudes en comunicarte conmigo 
+con el correo defalt034@protonmail.com 
 
 ## Empezar
 ### Instalación
