@@ -21,7 +21,7 @@ Facil y Rapido para crear un Entorno de Escritorio
 * [Obtener Ayuda](#Obtener-Ayuda)
 * [Empezar](#Empezar)
   * [Instalación](#Instalación)
-  * [Ejecucion](#Ejecucion)
+  * [Ejecutando](#Ejecutando)
 * [Donaciones](#Donaciones)
 
 ## Introducción
