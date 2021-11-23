@@ -48,7 +48,7 @@ La instalacion es la misma en todas las distribuciones de Linux.
 
 Dirigete a la ruta de Descargas `cd /home/$USER$/Downloads`
 
-Instala el repositorio con `git clone https://github/DeFaltDev/autoBspwm` 
+Instala el repositorio con `git clone https://github.com/DeFaltDev/autoBspwm.git` 
 
 Dirigete a la carpeta descargada `cd autoBspwm`
 
