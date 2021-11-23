@@ -30,6 +30,9 @@ El proposito de este script automatizado es darle la facilidad a los usuarios de
 sin hacer pasos que pueden llegar a ser tediosos y demorar bastante o para sacar de un apuro a alguien que necesita configurar 
 un escritorio limpio y de manera rapida para realizar sus cosas.
 
+La idea fue tomada del video de s4vitar de hace 1 año (2019) 'Como configurar un buen entorno de trabajo en linux'
+
+
 - Iconos simples
 - Polybar minimalista, con atajos rapidos y utiles
 - Fondo de pantalla que resalta toda la interfaz
@@ -70,6 +73,6 @@ y cambiar Qtile o cualquier gestor de ventanas por Bspwm e ingresar.
 
 ## Donaciones
 
-Aceptamos cualquier tipo de donacion que quieras realizar, esto no afecta si vamos a dejar de 
-actualizar el proyecto, pero si nos motiva y ayuda a mejorar
+Aceptamos cualquier tipo de donación que quieras realizar, esto no afecta si vamos a dejar de 
+actualizar el/los proyecto/s, pero si nos motiva y ayuda a mejorar
 
