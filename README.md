@@ -61,6 +61,9 @@ Luego de instalar la configuracion debes reiniciar la maquina para que todo carg
 
 Si en tu caso instalaste toda la configuracion junto con Bspwm deberias reiniciar la maquina y 
 cambiar Qtile o cualquier gestor de ventanas por Bspwm e ingresar
+<p align="center">
+  <img src="screnshot.png" alt="Bspwm">
+</p>
 
 ## Donaciones
 
