@@ -263,6 +263,8 @@ def powerlevel():
     # Añadiendo scripts personalizados
     os.system("cp files/zshrc_conf ~/.zshrc")
     os.system("cp files/oth/p10k.zsh ~/.p10k.zsh")
+    os.system("mkdir ~/powerlevel10k")
+    os.system("cp -r files/oth/powerlevel10kcopie/* ~/powerlevel10k")
   
     time.sleep(2)
     blue()
