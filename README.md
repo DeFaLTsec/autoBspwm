@@ -47,7 +47,7 @@ con el correo defalt034@protonmail.com
 
 ## Empezar
 ### Instalación
-La instalacion es la misma en todas las distribuciones de Linux.
+La instalacion es la misma en ParrotOS y KaliLinux, aun no funciona en Ubuntu y ArchLinux.
 
 `cd /home/$USER$/Downloads`
 
