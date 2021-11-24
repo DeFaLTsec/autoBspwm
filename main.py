@@ -264,7 +264,13 @@ def powerlevel():
     os.system("cp files/zshrc_conf ~/.zshrc")
     os.system("cp files/oth/p10k.zsh ~/.p10k.zsh")
     os.system("mkdir ~/powerlevel10k")
+    os.system("sudo mkdir /root/powerlevel10k")
     os.system("cp -r files/oth/powerlevel10kcopie/* ~/powerlevel10k")
+    os.system("cp -r files/oth/powersudocopie/* /root/powerlevel10k")
+    
+    # cambiando a zsh por defecto
+    os.system("usermod --shell /usr/bin/zsh $USER")
+    os.system("usermod --shell /usr/bin/zsh root")
   
     time.sleep(2)
     blue()
@@ -361,6 +367,10 @@ def oth():
     
     # Instala Ranger
     os.system("sudo apt install ranger")
+    
+    # Instala Firefox y Firejail
+    os.system("tar -xf files/firefox.tar.bz2")
+    os.system("sudo apt install firejail")
 
     # Instala tema para slim-slimlock
     os.system("sudo rm -r /usr/share/slim/themes/default/*")
