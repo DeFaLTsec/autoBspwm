@@ -49,7 +49,7 @@ con el correo defalt034@protonmail.com
 ### Instalación
 La instalacion es la misma en ParrotOS y KaliLinux, aun no funciona en Ubuntu y ArchLinux.
 
-`cd /home/$USER$/Downloads`
+`cd /home/$USER/Downloads`
 
 `git clone https://github.com/DeFaltDev/autoBspwm.git`
 
