@@ -356,7 +356,7 @@ def oth():
     os.system("chmod +x /bin/whichSystem.py")
     os.system("chmod +x /bin/fastTCPscan.go")
 
-    # Instala lsd pa ra zsh
+    # Instala lsd para zsh
     os.system("sudo dpkg -i files/oth/lsd.deb")
     
     # Instala batcat
@@ -373,7 +373,6 @@ def oth():
     os.system("sudo apt install firejail")
 
     # Instala tema para slim-slimlock
-    os.system("sudo rm -r /usr/share/slim/themes/default/*")
     os.system("cp files/oth/slim/* /usr/share/slim/themes/default")
 
     print("\n[✔] Toda la configuracion se ha instalado correctamente!!\n")
