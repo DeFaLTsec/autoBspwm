@@ -346,10 +346,9 @@ def nvim():
     os.system("sudo rm -r nord-vim-master/")
     os.system("wget https://raw.githubusercontent.com/Necros1s/lotus/master/lotus.vim")
     os.system("wget https://raw.githubusercontent.com/Necros1s/lotus/master/lotusbar.vim")
-    os.system("wget https://raw.githubusercontent.com/Necros1s/lotus/master/init.vim")
+    
+    os.system("cp init.vim ~/.config/nvim")
     os.system("mv *.vim ~/.config/nvim")
-    os.system("echo 'colorscheme nord' >> ~/.config/nvim/init.vim")
-    os.system("echo 'syntax on' >> ~/.config/nvim/init.vim")
 
     time.sleep(2)
     blue()
