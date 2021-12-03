@@ -1,6 +1,26 @@
 import os, time
 from sys import stdout
 
+import sys
+import termios
+
+def wait_for(mess, *keys):
+    file_descriptor = sys.stdin.fileno()
+    old = termios.tcgetattr(file_descriptor)
+    new = old[:]
+
+    try:
+        new[3] &= ~(termios.ICANON | termios.ECHO)
+        termios.tcsetattr(file_descriptor, termios.TCSADRAIN, new)
+        print(mess, end="")
+        while True:
+            letra = sys.stdin.read(1)
+            if not keys or letra in keys:
+                print()
+                break
+    finally:
+        termios.tcsetattr(file_descriptor, termios.TCSADRAIN, old)
+
 def red():
     RED = "\033[1;31m"
     stdout.write(RED)
@@ -180,6 +200,7 @@ def picom():
     print("\n Instalando Picom...\n")
 
     # Clona el repositorio de Picom
+    os.chdir("../")
     os.system("git clone https://github.com/ibhagwan/picom.git")
     os.chdir("picom/")
     os.system("git submodule update --init --recursive")
@@ -189,7 +210,7 @@ def picom():
 
     # Elimina los archivos de picom
     os.system("sudo rm -r *.md *.conf *.desktop *.txt *.build *.spdx *.glsl COPYING Doxyfile CONTRIBUTORS bin/ build/ dbus-examples/ LICENSES/ man/ media/ meson/ src/ subprojects/ tests/")
-    os.chdir("../") 
+    os.chdir("../autoBspwm")
 
     time.sleep(2)
     blue()
@@ -242,6 +263,12 @@ def rofi():
     os.system("mkdir ~/.config/rofi")
     os.system("mkdir ~/.config/rofi/themes")
     os.system("cp files/nord.rasi ~/.config/rofi/themes")
+    purple()
+    print("\n A continuacion se te presentara un menu en donde deberas bajar y elegir nord y presionar las teclas 'Alt + A'...")
+    blue()
+    wait_for("Presione una tecla para continuar")
+    time.sleep(2)
+    os.system("rofi-theme-selector nord nord")
     
     time.sleep(2)
     blue()
@@ -266,7 +293,7 @@ def powerlevel():
     os.system("mkdir ~/powerlevel10k")
     os.system("sudo mkdir /root/powerlevel10k")
     os.system("cp -r files/oth/powerlevel10kcopie/* ~/powerlevel10k")
-    os.system("cp -r files/oth/powersudocopie/* /root/powerlevel10k")
+    os.system("sudo cp -r files/oth/powerlevel10kcopie/* /root/powerlevel10k")
     
     # cambiando a zsh por defecto
     os.system("usermod --shell /usr/bin/zsh $USER")
@@ -373,6 +400,7 @@ def oth():
     os.system("sudo apt install firejail")
 
     # Instala tema para slim-slimlock
+    os.system("sudo rm -r /usr/share/slim/themes/default/*")
     os.system("cp files/oth/slim/* /usr/share/slim/themes/default")
 
     print("\n[✔] Toda la configuracion se ha instalado correctamente!!\n")
@@ -383,7 +411,7 @@ if __name__ == '__main__':
     if id == 0:
         red()
         print()
-        print("[!] No necesitas ser rot para ejecutar la herramienta")
+        print("[!] No necesitas ser root para ejecutar la herramienta")
         print()
     else:
         menu()
