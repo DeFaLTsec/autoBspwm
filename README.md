@@ -8,7 +8,7 @@ Facil y Rapido para crear un Entorno de Escritorio
 </p>
 
 
-**[Introducción](#Introducción) | [Instalación](#instalación) | [Soporte](#Obtener-Ayuda) | [Donaciones](#Donaciones)**
+**[Introducción](#Introducción) | [Instalación](#instalación) | [Soporte](#Obtener-Ayuda)**
 
 **autoBspwm ayuda a crear un entorno de escritorio para pentesting-hacking, progamar, desarrollar aplicaciones o simplemente tener un entorno bonito con una estetica
  minimalista, limpia y con una instalacion rapida**
@@ -22,7 +22,6 @@ Facil y Rapido para crear un Entorno de Escritorio
 * [Empezar](#Empezar)
   * [Instalación](#Instalación)
   * [Ejecutando](#Ejecutando)
-* [Donaciones](#Donaciones)
 
 ## Introducción
 
