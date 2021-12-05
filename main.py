@@ -59,7 +59,7 @@ def menu():
     time.sleep(1)
     print("\n3 -> Instalar Polybar, Powerlevel10k ...")
     time.sleep(1)
-    print("\n4 -> Instalar Todo")
+    print("\n4 -> Instalar Individualmente")
     time.sleep(1)
     print("\n5 -> Salir")
     time.sleep(1)
@@ -82,18 +82,31 @@ def menu():
         nvim()
         oth()
     if option == "4":
-        req()
-        bspwm()
-        polybar()
-        fonts()
-        powerlevel()
-        wallpaper()
-        picom()
-        theme()
-        rofi()
-        tmux()
-        nvim()
-        oth()
+        print("\n Elige que quieres instalar...\n polybar \n fonts \n powerlevel10k \n wallpaper \n picom \n polybartheme \n rofi \n tmux \n nvim \n Otros  ")
+       
+        option = input("\Escribe que quieres instalar -->> ")
+        
+        if option == "polybar":
+            polybar()
+        if option == "fonts":
+            fonts()
+        if option == "powerlevel10k":
+            powerlevel()
+        if option == "wallpaper":
+            wallpaper()
+        if option == "picom":
+            picom()
+        if option == "polybartheme":
+            theme()
+        if option == "rofi":
+            rofi()
+        if option == "tmux":
+            tmux()
+        if option == "nvim":
+            nvim()
+        if option == "otros":
+            oth()
+        
     if option == "5":
         exit()
 
@@ -102,7 +115,8 @@ def exit():
     print("Saliendo...")
     time.sleep(3)
     os.system("exit")
-
+   
+os.system('clear')
 def req():
     white()
     print("\nInstalando requisitos...\n")
@@ -127,6 +141,9 @@ def req():
     time.sleep(2)
     blue()
     print("\n[✔] Todos los requisitos han sido instalados correctamente\n")
+    
+    time.sleep(2)
+    os.system('clear')
 
 
 def bspwm():
@@ -175,7 +192,9 @@ def bspwm():
     time.sleep(2)
     blue()
     print("\n[✔] Bspwm instalado correctamente!\n")
-
+    time.sleep(2)
+    os.system('clear')
+    
 def polybar():
     white()
     print("\n Instalando polybar...\n")
@@ -194,7 +213,10 @@ def polybar():
     time.sleep(2)
     blue()
     print("\n[✔] Polybar Instalada correctamente!\n")
-
+    time.sleep(2)
+    os.system('clear')
+    
+    
 def picom():
     white()
     print("\n Instalando Picom...\n")
@@ -215,7 +237,9 @@ def picom():
     time.sleep(2)
     blue()
     print("\n[✔] Picom Instalado correctamente!\n")
-
+    time.sleep(2)
+    os.system('clear')
+    
 def wallpaper():
     white()
     print("\n Agregando Walpaper...\n")
@@ -228,7 +252,10 @@ def wallpaper():
     time.sleep(2)
     blue()
     print("\n[✔] Wallpaper Agregado Correctamente!\n")
-
+    time.sleep(2)
+    os.system('clear')
+    
+    
 def theme():
     white()
     print("\n Configurando tema para polybar...\n")
@@ -254,7 +281,9 @@ def theme():
     time.sleep(2)
     blue()
     print("\n[✔] El Tema para Polybar ha sido aplicada correctamente!\n")
-
+    time.sleep(2)
+    os.system('clear')
+    
 def rofi():
     white()
     print("\n Configurando el tema para Rofi...\n")
@@ -273,6 +302,8 @@ def rofi():
     time.sleep(2)
     blue()
     print("\n[✔] El Tema para Rofi ha sido aplicado correctamente!\n")
+    time.sleep(2)
+    os.system('clear')
 
 def powerlevel():
     white()
@@ -302,6 +333,8 @@ def powerlevel():
     time.sleep(2)
     blue()
     print("\n[✔] La powerlevel10k ha sido instalada correctamente!\n")
+    time.sleep(2)
+    os.system('clear')
 
 
 def fonts():
@@ -332,6 +365,9 @@ def fonts():
     time.sleep(2)
     blue()
     print("\n[✔] Hack Nerd Font se ha instalado correctamente!\n")
+    time.sleep(2)
+    os.system('clear')
+    
 
 def nvim():
     white()
@@ -353,6 +389,9 @@ def nvim():
     time.sleep(2)
     blue()
     print("\n[✔] Nvim ha sido instalado correctamente\n")
+    time.sleep(2)
+    os.system('clear')
+    
 
 def tmux():
     white()
@@ -371,7 +410,9 @@ def tmux():
     time.sleep(2)
     blue()
     print("\n[✔] Oh My Tmux instalado correctamente!\n")
-
+    time.sleep(2)
+    os.system('clear')
+    
 def oth():
     white()
     print("\n Instalando fastTCPscan, wichSystem, lsd, batcat...\n")
@@ -403,6 +444,7 @@ def oth():
     os.system("cp files/oth/slim/* /usr/share/slim/themes/default")
 
     print("\n[✔] Toda la configuracion se ha instalado correctamente!!\n")
+    
 
 if __name__ == '__main__':
     id = os.getuid()
