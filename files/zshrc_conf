@@ -102,3 +102,10 @@ PSCredential () {
     echo -e "\t[+] \$cred = New-Object System.Management.Automation.PSCredential \$user, \$secpw"
     echo -e "\t[+] Invoke-Command -ComputerName localhost -Credential \$cred -ScriptBlock { whoami }"
 }
+
+function settarget(){
+    ip_address=$1
+    machine_name=$2
+    echo "$ip_address $machine_name" > /home/defalt/.config/bin/target
+}
+
