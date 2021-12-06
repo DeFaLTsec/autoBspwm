@@ -233,7 +233,7 @@ def picom():
     os.system("ninja -C build")
     os.system("sudo ninja -C build install")
     os.system("cp files/picomcopia ~/.config/picom")
-    os.system("mv ~/.config/picom/picomcopia ~/.config/picom/picom.conf")
+    os.system("sudo mv ~/.config/picom/picomcopia ~/.config/picom/picom.conf")
     os.system("chmod +x ~/.config/picom/picom.conf")
 
     # Elimina los archivos de picom
