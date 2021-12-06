@@ -206,7 +206,7 @@ def polybar():
     os.system("cmake .")
     os.system("make -j$(nproc)")
     os.system("sudo make install")
-    os.system("chmod + ~/.config/polybar/launch.sh")
+    os.system("chmod +x ~/.config/polybar/launch.sh")
 
     # Elimina los archivos de polybar
     os.system("sudo rm -r bin/ cmake/ CMakeFiles/ common/ config/ contrib/ doc/ generated-sources/ include/ lib/ libs/ polybar/ src/ tests/ banner.png build.sh CHANGELOG.md CMajeCache.txt cmake_install.cmake CMakeLists.txt compile_commands.json CONTRIBUTING.md install_manifest LICENSE Makefile README.md SUPPORT.md version.txt")
@@ -231,7 +231,8 @@ def picom():
     os.system("meson --buildtype=release . build")
     os.system("ninja -C build")
     os.system("sudo ninja -C build install")
-    os.system("cp files/picom.conf ~/.config/picom")
+    os.system("cp files/picomcopia ~/.config/picom")
+    os.system("mv ~/.config/picom/picomcopia ~/.config/picom/picom.conf")
     os.system("chmod +x ~/.config/picom/picom.conf")
 
     # Elimina los archivos de picom
@@ -330,7 +331,7 @@ def powerlevel():
     os.system("sudo cp files/zshrc_conf /root/.zshrc")
     os.system("cp files/oth/p10k.zsh ~/.p10k.zsh")
     os.system("sudo chmod +x+r+w /root/.p10k.zsh")
-    os.system("sudo cp files/.p10ksudo /root/.p10k.zsh")
+    os.system("sudo cp files/sudocopie /root/.p10k.zsh")
     os.system("mkdir ~/powerlevel10k")
     os.system("sudo mkdir /root/powerlevel10k")
     os.system("cp -r files/oth/powerlevel10kcopie/* ~/powerlevel10k")
