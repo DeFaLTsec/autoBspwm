@@ -83,7 +83,7 @@ def menu():
         slim()
         oth()
     if option == "4":
-        print("\n Elige que quieres instalar...\n polybar \n fonts \n powerlevel10k \n wallpaper \n picom \n polybartheme \n rofi \n tmux \n nvim \n otros \n exit ")
+        print("\n Elige que quieres instalar...\n polybar \n fonts \n powerlevel10k \n wallpaper \n picom \n polybartheme \n rofi \n tmux \n nvim \n otros \n slim \n exit ")
        
         option = input("\Escribe que quieres instalar -->> ")
         
