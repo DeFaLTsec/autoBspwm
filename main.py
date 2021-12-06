@@ -80,6 +80,7 @@ def menu():
         rofi()
         tmux()
         nvim()
+        slim()
         oth()
     if option == "4":
         print("\n Elige que quieres instalar...\n polybar \n fonts \n powerlevel10k \n wallpaper \n picom \n polybartheme \n rofi \n tmux \n nvim \n Otros  ")
@@ -205,6 +206,7 @@ def polybar():
     os.system("cmake .")
     os.system("make -j$(nproc)")
     os.system("sudo make install")
+    os.system("chmod + ~/.config/polybar/launch.sh")
 
     # Elimina los archivos de polybar
     os.system("sudo rm -r bin/ cmake/ CMakeFiles/ common/ config/ contrib/ doc/ generated-sources/ include/ lib/ libs/ polybar/ src/ tests/ banner.png build.sh CHANGELOG.md CMajeCache.txt cmake_install.cmake CMakeLists.txt compile_commands.json CONTRIBUTING.md install_manifest LICENSE Makefile README.md SUPPORT.md version.txt")
@@ -229,6 +231,8 @@ def picom():
     os.system("meson --buildtype=release . build")
     os.system("ninja -C build")
     os.system("sudo ninja -C build install")
+    os.system("cp files/picom.conf ~/.config/picom")
+    os.system("chmod +x ~/.config/picom/picom.conf")
 
     # Elimina los archivos de picom
     os.system("sudo rm -r *.md *.conf *.desktop *.txt *.build *.spdx *.glsl COPYING Doxyfile CONTRIBUTORS bin/ build/ dbus-examples/ LICENSES/ man/ media/ meson/ src/ subprojects/ tests/")
@@ -293,11 +297,13 @@ def rofi():
     os.system("mkdir ~/.config/rofi/themes")
     os.system("cp files/nord.rasi ~/.config/rofi/themes")
     purple()
-    print("\n A continuacion se te presentara un menu en donde deberas bajar y elegir nord y presionar las teclas 'Alt + A'...")
+    print("\n A continuacion se te presentara un menu en donde deberas bajar y elegir nord y presionar las teclas 'Alt + A'\n Presione una tecla para continuar...")
     blue()
-    wait_for("Presione una tecla para continuar")
+    wait_for("Presione una tecla para continuar...")
     time.sleep(2)
+    
     os.system("rofi-theme-selector nord nord")
+    wait_for("Presione una tecla para continuar...")
     
     time.sleep(2)
     blue()
@@ -316,11 +322,15 @@ def powerlevel():
     # Instalacion de powerlevel10k para root
     os.system("sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /root/.powerlevel10k")
     os.system("sudo chmod +x+w+r /root/.zshrc")
-    os.system("sudo echo 'source ~/.powerlevel10k/powerlevel10k.zsh-theme' >> /root/.zshrc")
+    os.system("sudo echo 'source /root/powerlevel10k/powerlevel10k.zsh-theme' >> /root/.zshrc")
 
     # Añadiendo scripts personalizados
     os.system("cp files/zshrc_conf ~/.zshrc")
+    os.system("sudo chmod +x+w+r /root/.zshrc")
+    os.system("sudo cp files/zshrc_conf /root/.zshrc")
     os.system("cp files/oth/p10k.zsh ~/.p10k.zsh")
+    os.system("sudo chmod +x+r+w /root/.p10k.zsh")
+    os.system("sudo cp files/.p10ksudo /root/.p10k.zsh")
     os.system("mkdir ~/powerlevel10k")
     os.system("sudo mkdir /root/powerlevel10k")
     os.system("cp -r files/oth/powerlevel10kcopie/* ~/powerlevel10k")
@@ -374,6 +384,7 @@ def nvim():
     print("\n Instalando Tema de Nvim...\n")
     
     # Instala el tema de nvim
+    os.chdir("../")
     os.system("wget https://github.com/arcticicestudio/nord-vim/archive/master.zip")
     os.system("unzip master.zip")
     os.system("rm master.zip")
@@ -382,9 +393,9 @@ def nvim():
     os.system("sudo rm -r nord-vim-master/")
     os.system("wget https://raw.githubusercontent.com/Necros1s/lotus/master/lotus.vim")
     os.system("wget https://raw.githubusercontent.com/Necros1s/lotus/master/lotusbar.vim")
-    
     os.system("cp init.vim ~/.config/nvim")
     os.system("mv *.vim ~/.config/nvim")
+    os.chdir("autoBspwm/")
 
     time.sleep(2)
     blue()
@@ -436,9 +447,27 @@ def oth():
     os.system("sudo apt install ranger")
     
     # Instala Firefox y Firejail
-    os.system("tar -xf files/firefox.tar.bz2")
+    os.system("sudo mkdir /opt/firefox")
+    os.system("sudo mv files/firefox.tar.bz2 /opt/firefox")
+    os.system("tar -xf /opt/firefox/firefox.tar.bz2")
     os.system("sudo apt install firejail")
-
+    
+    time.sleep(2)
+    blue()
+    print("\n[✔] Otras configuraciones instaladas correctamente!\n")
+    time.sleep(2)
+    os.system('clear')
+    
+def slim():
+    white()
+    print("\n Instalando Slim, slimklock...")
+    
+    os.chdir("../")
+    os.system("git clone https://github.com/joelburget/slimlock.git")
+    os.system("cd slimlock/")
+    os.system("sudo make")
+    os.system("sudo make install")
+    
     # Instala tema para slim-slimlock
     os.system("sudo rm -r /usr/share/slim/themes/default/*")
     os.system("cp files/oth/slim/* /usr/share/slim/themes/default")
