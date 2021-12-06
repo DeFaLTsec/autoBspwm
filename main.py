@@ -83,7 +83,7 @@ def menu():
         slim()
         oth()
     if option == "4":
-        print("\n Elige que quieres instalar...\n polybar \n fonts \n powerlevel10k \n wallpaper \n picom \n polybartheme \n rofi \n tmux \n nvim \n Otros  ")
+        print("\n Elige que quieres instalar...\n polybar \n fonts \n powerlevel10k \n wallpaper \n picom \n polybartheme \n rofi \n tmux \n nvim \n otros \n exit ")
        
         option = input("\Escribe que quieres instalar -->> ")
         
@@ -107,9 +107,10 @@ def menu():
             nvim()
         if option == "otros":
             oth()
-        
-    if option == "5":
-        exit()
+        if option == "slim":
+            slim()
+        if option == "exit":
+            exit()
 
 def exit():
     purple()
